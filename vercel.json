@@ -1,23 +1,9 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "api/generate.js",
-            "use": "@vercel/node"
-        },
-        {
-            "src": "index.html",
-            "use": "@vercel/static"
-        }
-    ],
-    "routes": [
-        {
-            "src": "/api/generate",
-            "dest": "api/generate.js"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "index.html"
-        }
-    ]
+  "name": "copywriting-backend-vercel",
+  "version": "1.0.0",
+  "description": "Serverless function untuk proxy API Google Gemini di Vercel",
+  "main": "api/generate.js",
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  }
 }
